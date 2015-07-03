@@ -1,4 +1,8 @@
 (function() {
+	angular.module('fbr.iban', [])
+		.filter('iban', function() {
+			return formatIban;
+		});
 
 	/**
 	 * Formats an IBAN
@@ -17,9 +21,4 @@
 		}
 		return formattedIban;
 	}
-
-	angular.module('fbr.iban', [])
-		.filter('iban', function() {
-			return formatIban;
-		});
 })();
